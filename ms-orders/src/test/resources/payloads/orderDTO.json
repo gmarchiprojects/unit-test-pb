@@ -1,0 +1,13 @@
+{
+  "totalPrice": 0.00,
+  "customerCpf": "123456",
+  "productsOrder": [
+    {
+      "productId": "ABC123",
+      "quantity": 0,
+      "unitPrice": 0.00
+    }
+  ],
+  "paymentType": "CARTAO_DEBITO",
+  "deliveryDate": "2023-08-14"
+}

@@ -2,6 +2,7 @@ package br.com.compasso.msorders.dtos;
 
 import br.com.compasso.msorders.enums.PaymentTypeEnum;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,6 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OrderDTO {
 
     @JsonProperty("id")

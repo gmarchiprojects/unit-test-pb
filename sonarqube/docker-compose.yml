@@ -2,30 +2,6 @@ version: '3.3'
 
 services:
 
-  mysql:
-    image: mysql:8
-    restart: always
-    container_name: 'erp-system-db'
-    environment:
-      MYSQL_ROOT_PASSWORD: 'password'
-    ports:
-      - '3306:3306'
-    volumes:
-      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
-    expose:
-      - '3306'
-    networks:
-      - host
-
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'erp-system-messaging'
-    ports:
-        - 5672:5672
-        - 15672:15672
-    networks:
-      - host
-
   sonarqube:
     image: sonarqube:lts-community
     container_name: 'erp-system-sonarqube'
@@ -42,7 +18,8 @@ services:
       - sonarqube_logs:/opt/sonarqube/logs
     ports:
       - "9000:9000"
-
+    command:
+      - sudo sysctl -w vm.max_map_count=262144
   db:
     image: postgres:latest
     container_name: 'erp-system-db-sonarqube'

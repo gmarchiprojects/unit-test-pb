@@ -1,0 +1,20 @@
+{
+  "id": "3b87fc24-901e-4a75-be85-3a4f91ee46b5",
+  "firstName": "Giovanni",
+  "lastName": "Marchi",
+  "email": "giovanni.marchi@compasso.com.br",
+  "cpf": "12345678911",
+  "rg": "123456789",
+  "phone": "119999999999",
+  "addresses": [
+    {
+      "id": "839c9787-3f4b-46dc-8bed-2de78b380e70",
+      "address": "Rua Quase lá",
+      "number": "123456",
+      "neighborhood": "Vila de Baixo",
+      "postalCode": "111123152874",
+      "city": "Jundiai",
+      "state": "SP"
+    }
+  ]
+}
